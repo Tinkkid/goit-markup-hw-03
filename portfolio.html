@@ -14,9 +14,9 @@
   </head>
   <body>
     <!--Header's site-->
-    <header>
+    <div>
       <!--Navigation's site-->
-      <nav>
+      <nav class="container">
         <a href="./index.html" class="logo-header"
           ><span class="logo-letters">Web</span>Studio</a
         >
@@ -27,6 +27,7 @@
         </ul>
       </nav>
       <!--Contacts-->
+      <div class="container">
       <ul class="list">
         <li>
           <a href="mailto:info@devstudio.com" class="site-contacts"
@@ -39,24 +40,27 @@
           >
         </li>
       </ul>
+    </div>
     </header>
-
     <!-- Hero -->
     <main>
       <section>
         <!-- Hidden heading -->
         <h1 class="visually-hidden">Портфоліо</h1>
         <!-- Filtr buttons -->
-        <ul class="list">
+        <div class="container">
+          <ul class="list filtrs">
           <li><button type="button" class="filtr link">Усі</button></li>
           <li><button type="button" class="filtr link">Веб-сайти</button></li>
           <li><button type="button" class="filtr link">Додатки</button></li>
           <li><button type="button" class="filtr link">Дизайн</button></li>
           <li><button type="button" class="filtr link">Маркетинг</button></li>
         </ul>
+        </div>
 
         <!-- Images of the portfolio -->
-        <ul class="list">
+        <div class="container">
+          <ul class="portfolio list">
           <li>
             <a href="" class="portfolio-link"
               ><img
@@ -166,10 +170,12 @@
             >
           </li>
         </ul>
+        </div>
       </section>
     </main>
     <!-- Adress -->
     <footer class="footer">
+      <div class="container">      
       <a href="./index.html" class="logo-footer"
         ><span class="logo-letters">Web</span>Studio</a
       >
@@ -196,6 +202,7 @@
           </li>
         </ul>
       </address>
+      </div>
     </footer>
   </body>
 </html>
