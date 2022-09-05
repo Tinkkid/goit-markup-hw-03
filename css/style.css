@@ -11,6 +11,8 @@
   --text-color-footer: rgba(255, 255, 255, 0.6);
   --active-button-color: #188ce8;
   --color-shadow: #rgba(0, 0, 0, 0.15);
+  --color-border-header: 1px solid #ececec;
+  --color-border-cards: 1px solid #eeeeee;
 }
 
 body {
@@ -34,19 +36,26 @@ body {
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
-  outline: 2px solid tomato;
+}
+h2,
+h3 {
+  margin: 0;
+}
+img {
+  max-width: 100%;
+  display: block;
 }
 /* Navigation's site */
-.nav{
-    display: flex;
-    align-items: center;
+.nav {
+  display: flex;
+  align-items: center;
 }
 
 .logo-letters {
   color: var(--logo-button-text-color);
 }
 .logo-header {
-    margin-right: 92px;
+  margin-right: 92px;
 
   color: var(--text-color);
   text-decoration: none;
@@ -56,8 +65,8 @@ body {
   line-height: 1.2;
 }
 .link {
- padding-top: 32px;
-    padding-bottom: 32px;
+  padding-top: 32px;
+  padding-bottom: 32px;
   color: var(--secondary-text-color);
   text-decoration: none;
   font-weight: 500;
@@ -74,20 +83,19 @@ body {
   color: var(--logo-button-text-color);
 }
 .site-nav {
-    display: block;
-    display: flex;    
+  display: block;
+  display: flex;
 }
 
-.site-nav .item:not(:last-child){
-    margin-right: 50px;
+.site-nav .item:not(:last-child) {
+  margin-right: 50px;
 }
-
 
 /* Links to contacts */
 .site-contacts {
-    padding-top: 32px;
-    padding-bottom: 32px;
-    
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   color: var(--primary-text-color);
   text-decoration: none;
   font-weight: 500;
@@ -99,17 +107,17 @@ body {
 .site-contacts:focus {
   color: var(--logo-button-text-color);
 }
-.contact{
-    margin-left: auto;
-    display: block;
-    display: flex;
+.contact {
+  margin-left: auto;
+  display: block;
+  display: flex;
 }
-.contact .item:not(:last-child){
-margin-right: 50px;
+.contact .item:not(:last-child) {
+  margin-right: 50px;
 }
-.contact .item{
-    padding-top: 32px;
-    padding-bottom: 32px;
+.contact .item {
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 /* Hero */
@@ -158,10 +166,11 @@ margin-right: 50px;
   margin: -1px;
 }
 .features {
-    display: flex;
+  display: flex;
+  margin-bottom: 94px;
 }
 .features .item {
-    flex-basis: calc((100%-3*30px)/4);
+  flex-basis: calc((100%-3 * 30px) / 4);
 }
 .features-title {
   margin-bottom: 10px;
@@ -178,10 +187,10 @@ margin-right: 50px;
 
 /* Our works */
 .our-work {
-    display: flex;
+  display: flex;
 }
 .our-work .item:not(:last-child) {
-    margin-right: 30px;
+  margin-right: 30px;
 }
 .our-work-title,
 .our-teams-title {
@@ -196,8 +205,15 @@ margin-right: 50px;
 }
 
 /* Our teams */
+.border-teams {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background: var(--primary-background-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
 .our-teams-name {
-  margin-top: 30px;
   margin-bottom: 10px;
 
   color: var(--secondary-text-color);
@@ -217,11 +233,11 @@ margin-right: 50px;
   background-color: var(--secondary-background-color);
 }
 .our-teams {
-    display: flex;
+  display: flex;
   padding-bottom: 94px;
 }
 .our-teams .item:not(:last-child) {
-margin-right: 30px;
+  margin-right: 30px;
 }
 
 /* Adress */
@@ -268,7 +284,19 @@ margin-right: 30px;
 
 /* Portfolio.html */
 /* Filtr buttons */
+.filtrs {
+  display: flex;
+  justify-content: center;
+  margin-top: 94px;
+  margin-bottom: 50px;
+}
+.filtrs .item:not(:last-child) {
+  margin-right: 8px;
+}
 .filtr {
+  padding-bottom: 6px;
+  padding-top: 6px;
+
   background-color: var(--secondary-background-color);
   color: var(--secondary-text-color);
   font-family: inherit;
@@ -277,29 +305,44 @@ margin-right: 30px;
   line-height: 1.6;
   letter-spacing: 0.03em;
   cursor: pointer;
-}
-.filtrs {
-  margin-top: 94px;
-  margin-bottom: 50px;
+  border-radius: 4px;
+  border-width: 0;
 }
 .filtr:hover,
 .filtr:focus {
   background-color: var(--logo-button-text-color);
   color: var(--added-text-color);
-  font-family: inherit;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.6;
-  letter-spacing: 0.03em;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
 }
 /* Hero in Portfolio.html */
+.border {
+  border-bottom: var(--color-border-header);
+}
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
+}
+.portfolio .item {
+  width: 370px;
+  margin: 15px;
+}
+.border-card {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 24px;
+  padding-right: 24px;
+  border-bottom: var(--color-border-cards);
+  border-left: var(--color-border-cards);
+  border-right: var(--color-border-cards);
+}
+
 .portfolio-link {
   text-decoration: none;
 }
 .portfolio-title {
-  margin-top: 20px;
-  margin-bottom: 0;
-
   color: var(--secondary-text-color);
   font-weight: 700;
   font-size: 18px;
