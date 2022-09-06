@@ -38,7 +38,8 @@ body {
   padding-right: 15px;
 }
 h2,
-h3 {
+h3,
+p {
   margin: 0;
 }
 img {
@@ -169,15 +170,13 @@ img {
   height: 1px;
   margin: -1px;
 }
-.feature {
+.section {
   padding-bottom: 94px;
   padding-top: 94px;
 }
 .features {
   display: flex;
-}
-.features .item {
-  flex-basis: calc((100%-3 * 30px) / 4);
+  gap: 30px;
 }
 .features-title {
   margin-bottom: 10px;
@@ -194,7 +193,6 @@ img {
 
 /* Our works */
 .work {
-  padding-top: 94px;
   padding-bottom: 94px;
 }
 .our-work {
@@ -216,8 +214,6 @@ img {
 
 /* Our teams */
 .team {
-  padding-bottom: 94px;
-  padding-top: 94px;
   background-color: var(--secondary-background-color);
 }
 .our-teams {
@@ -232,9 +228,6 @@ img {
   padding-top: 30px;
   padding-bottom: 30px;
   background: var(--primary-background-color);
-  /* box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px; */
 }
 .our-teams-name {
   margin-bottom: 10px;
@@ -280,7 +273,7 @@ img {
   font-style: normal;
   text-decoration: none;
 }
-.list .item:not(:last-child) {
+.list .items:not(:last-child) {
   margin-bottom: 9px;
 }
 .footer-adress {
@@ -300,10 +293,6 @@ img {
 
 /* Portfolio.html */
 /* Filtr buttons */
-.main-portfolio {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
 .filtrs {
   display: flex;
   justify-content: center;
@@ -362,6 +351,7 @@ img {
   text-decoration: none;
 }
 .portfolio-title {
+  margin-bottom: 4px;
   color: var(--secondary-text-color);
   font-weight: 700;
   font-size: 18px;
@@ -369,9 +359,6 @@ img {
   letter-spacing: 0.06em;
 }
 .portfolio-list {
-  margin-top: 4px;
-  margin-bottom: 0;
-
   color: var(--primary-text-color);
   font-size: 16px;
   line-height: 1.88;
